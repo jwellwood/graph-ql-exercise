@@ -1,8 +1,8 @@
 import React from 'react';
 import { CharacterVm } from 'common/models';
-import { getCharacterCollection } from 'core/graphql/index';
 import { mapFromApiToVm } from 'common/mappers/character-collection.mapper';
 import { mapToCollection } from 'common/mappers';
+import { getCharacterCollection } from './api';
 
 export const useCharacterCollection = () => {
   const [characterCollection, setCharacterCollection] = React.useState<

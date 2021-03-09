@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import * as api from 'core/api';
 import { CommentFormComponent } from './components/comment-form.component';
 import { linkRoutes } from 'core/router';
 import { createEmptyComment, Comment } from 'common/models';
+import * as api from './api';
 
 export const CommentFormContainer: React.FunctionComponent = () => {
   const history = useHistory();

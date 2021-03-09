@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Character } from 'common/models';
 import { Episode } from 'common/models/episode.model';
-import { getCharacter, getEpisodes } from 'core/graphql';
+import { getEpisodes } from './api';
 import { useParams } from 'react-router-dom';
 import EpisodeList from './episode-list';
+import { getCharacter } from 'pods/character/api';
 
 const EpisodesContainer: React.FC = () => {
   const { id } = useParams<{ id: string }>();

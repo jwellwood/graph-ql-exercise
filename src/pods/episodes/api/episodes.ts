@@ -1,5 +1,5 @@
 import { Episode } from 'common/models/episode.model';
-import { graphQLClient } from './graphql.client';
+import { graphQLClient } from 'core/graphql/graphql.client';
 
 export const getEpisodes = (ids): Promise<Episode[]> => {
   const query = `

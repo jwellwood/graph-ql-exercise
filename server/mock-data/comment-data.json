@@ -2,11 +2,6 @@
   "comments": [
     {
       "char_id": "1",
-      "comment": "First comment",
-      "id": 1
-    },
-    {
-      "char_id": "1",
       "comment": "New comment",
       "id": 2
     },
@@ -14,6 +9,11 @@
       "char_id": "81",
       "comment": "Comment here",
       "id": 3
+    },
+    {
+      "char_id": "1",
+      "comment": "Another test comment updated",
+      "id": 4
     }
   ]
 }

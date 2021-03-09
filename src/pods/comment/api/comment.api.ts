@@ -4,9 +4,9 @@ import { Comment } from 'common/models';
 const url = 'http://localhost:3000/comments';
 
 export const getComments = async (id: string): Promise<Comment[]> => {
-  const commentsUrl = `${url}/?char_id=${id}`;
-  const res = await Axios.get(commentsUrl);
   try {
+    const commentsUrl = `${url}/?char_id=${id}`;
+    const res = await Axios.get(commentsUrl);
     return res.data;
   } catch (error) {
     console.log(error);
@@ -16,9 +16,9 @@ export const getComments = async (id: string): Promise<Comment[]> => {
 export const getSingleComment = async (
   comment_id: number
 ): Promise<Comment> => {
-  const commentUrl = `${url}/${comment_id}`;
-  const res = await Axios.get(commentUrl);
   try {
+    const commentUrl = `${url}/${comment_id}`;
+    const res = await Axios.get(commentUrl);
     return res.data;
   } catch (error) {
     console.log(error);
@@ -26,11 +26,11 @@ export const getSingleComment = async (
 };
 
 export const addComment = async (id: string, comment: Comment) => {
-  const req = await Axios.post(url, {
-    char_id: id,
-    comment: comment.comment,
-  });
   try {
+    const req = await Axios.post(url, {
+      char_id: id,
+      comment: comment.comment,
+    });
     return req;
   } catch (error) {
     console.log(error);
@@ -38,10 +38,10 @@ export const addComment = async (id: string, comment: Comment) => {
 };
 
 export const editComment = async (comment: Comment) => {
-  const req = await Axios.put(`${url}/${comment.id}`, {
-    ...comment,
-  });
   try {
+    const req = await Axios.put(`${url}/${comment.id}`, {
+      ...comment,
+    });
     return req;
   } catch (error) {
     console.log(error);
@@ -49,8 +49,8 @@ export const editComment = async (comment: Comment) => {
 };
 
 export const deleteComment = async (id: number) => {
-  const req = await Axios.delete(`${url}/${id}`);
   try {
+    const req = await Axios.delete(`${url}/${id}`);
     return req;
   } catch (error) {
     console.log(error);

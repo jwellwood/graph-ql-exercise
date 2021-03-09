@@ -1,5 +1,5 @@
 import { Character } from 'common/models';
-import { graphQLClient } from './graphql.client';
+import { graphQLClient } from 'core/graphql/graphql.client';
 
 export const getCharacter = (id): Promise<Character> => {
   const query = `
